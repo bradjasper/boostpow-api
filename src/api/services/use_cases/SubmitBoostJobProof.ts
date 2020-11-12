@@ -54,6 +54,8 @@ export class SubmitBoostJobProof implements UseCase {
                 txid: input.prevTxId.toString('hex'),
                 vout: input.outputIndex,
             });
+            
+            if (matchingJob) { break }
         }
 
         if (!matchingJob) {
